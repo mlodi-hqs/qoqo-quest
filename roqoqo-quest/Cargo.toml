@@ -21,7 +21,7 @@ doctest = false
 
 [dependencies]
 quest-sys = { version = "~0.14.4-alpha.3", path = "../quest-sys", default-features = false }
-roqoqo = { version = "~1.15.2-alpha.3", features = ["serialize"] }
+roqoqo = { git = "https://github.com/mlodi-hqs/qoqo", branch = "strum", features = ["serialize"] }
 
 qoqo_calculator = { version = "~1.2" }
 num-complex = { version = "0.4" }

@@ -479,6 +479,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
 
 [[package]]
+name = "heck"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
+
+[[package]]
 name = "hermit-abi"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -960,7 +966,7 @@ version = "0.21.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "08260721f32db5e1a5beae69a55553f56b99bd0e1c3e6e0a5e8851a9d0f5a85c"
 dependencies = [
- "heck",
+ "heck 0.4.1",
  "proc-macro2",
  "pyo3-build-config",
  "quote",
@@ -969,11 +975,11 @@ dependencies = [
 
 [[package]]
 name = "qoqo"
-version = "1.15.2-alpha.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f82e0ed406ece0c80e73b5d22e3426c48a1122be1839948b2b4a311c8d0861e5"
+version = "1.15.2-alpha.5"
+source = "git+https://github.com/mlodi-hqs/qoqo?branch=strum#b8829238f4741bcf39ad5409c64c1422a263c38c"
 dependencies = [
  "bincode",
+ "clap",
  "ndarray",
  "num-complex",
  "numpy",
@@ -997,9 +1003,8 @@ dependencies = [
 
 [[package]]
 name = "qoqo-macros"
-version = "1.15.2-alpha.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "490f842096e0eeac4a35e040eac3af6a002fe0f6b95893448fa1b9389ed32e64"
+version = "1.15.2-alpha.5"
+source = "git+https://github.com/mlodi-hqs/qoqo?branch=strum#b8829238f4741bcf39ad5409c64c1422a263c38c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1175,9 +1180,8 @@ checksum = "7a66a03ae7c801facd77a29370b4faec201768915ac14a721ba36f20bc9c209b"
 
 [[package]]
 name = "roqoqo"
-version = "1.15.2-alpha.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "be76f0eb61de1e5f7ed9d77c94c7de8cf3b3d13534584322aedf0de67933ed27"
+version = "1.15.2-alpha.5"
+source = "git+https://github.com/mlodi-hqs/qoqo?branch=strum#b8829238f4741bcf39ad5409c64c1422a263c38c"
 dependencies = [
  "async-trait",
  "bincode",
@@ -1193,6 +1197,8 @@ dependencies = [
  "rand_distr",
  "roqoqo-derive",
  "serde",
+ "strum",
+ "strum_macros",
  "struqture 1.9.2",
  "syn",
  "thiserror",
@@ -1200,9 +1206,8 @@ dependencies = [
 
 [[package]]
 name = "roqoqo-derive"
-version = "1.15.2-alpha.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86483cf880973fb234ad781002a1f367f63cd0f52c76007822cbf4decf35df87"
+version = "1.15.2-alpha.5"
+source = "git+https://github.com/mlodi-hqs/qoqo?branch=strum#b8829238f4741bcf39ad5409c64c1422a263c38c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1245,6 +1250,12 @@ dependencies = [
  "linux-raw-sys",
  "windows-sys 0.52.0",
 ]
+
+[[package]]
+name = "rustversion"
+version = "1.0.17"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "955d28af4278de8121b7ebeb796b6a45735dc01436d898801014aced2773a3d6"
 
 [[package]]
 name = "ryu"
@@ -1382,6 +1393,25 @@ name = "strsim"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73473c0e59e6d5812c5dfe2a064a6444949f089e20eec9a2e5506596494e4623"
+
+[[package]]
+name = "strum"
+version = "0.26.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8fec0f0aef304996cf250b31b5a10dee7980c85da9d759361292b8bca5a18f06"
+
+[[package]]
+name = "strum_macros"
+version = "0.26.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4c6bee85a5a24955dc440386795aa378cd9cf82acd5f764469152d2270e581be"
+dependencies = [
+ "heck 0.5.0",
+ "proc-macro2",
+ "quote",
+ "rustversion",
+ "syn",
+]
 
 [[package]]
 name = "struqture"
